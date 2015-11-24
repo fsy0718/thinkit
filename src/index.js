@@ -1,16 +1,21 @@
 'use strict';
-
+//文件模块
 import fs from 'fs';
+//路径操作模块
 import path from 'path';
+//工具模块
 import util from 'util';
+//加密解密模块
 import crypto from 'crypto';
+//网络模块
 import net from 'net';
 
 let toString = Object.prototype.toString;
 let isArray = Array.isArray;
 let isBuffer = Buffer.isBuffer;
-let numberReg = /^((\-?\d*\.?\d*(?:e[+-]?\d*(?:\d?\.?|\.?\d?)\d*)?)|(0[0-7]+)|(0x[0-9a-f]+))$/i;
 
+let numberReg = /^((\-?\d*\.?\d*(?:e[+-]?\d*(?:\d?\.?|\.?\d?)\d*)?)|(0[0-7]+)|(0x[0-9a-f]+))$/i;
+//添加promise
 if (!global.Promise) {
   global.Promise = require('es6-promise').Promise;
 }
@@ -539,3 +544,4 @@ export default {
   getFiles: getFiles,
   objValues: objValues
 };
+/* vim:sw=4: ts=4: sts=4: noet:fdm=marker:fdc=1*/
